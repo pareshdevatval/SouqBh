@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "708146853723",
+    "firebase_url": "https://souqbh-bf661.firebaseio.com",
+    "project_id": "souqbh-bf661",
+    "storage_bucket": "souqbh-bf661.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708146853723:android:9e181187f503650e",
+        "android_client_info": {
+          "package_name": "com.souqbh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708146853723-2raskoivn4uv40u9ev5vbr2s94lmmul5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZRym0k1yaM6CnnSnQRNAGio9pY_Zb6uI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708146853723-2raskoivn4uv40u9ev5vbr2s94lmmul5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

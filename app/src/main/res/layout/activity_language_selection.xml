@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLanguageSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/language"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblChooseLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/large_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:textColor="@color/black_1"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/ivLanguageSelection"
+                    android:text="@string/lbl_choose_language"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    android:text="@string/lbl_select_app_lang"
+                    android:id="@+id/lblSelectAppLang"
+                    android:textColor="@color/gray_1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblChooseLanguage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_15sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlEngLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_45sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/rlArabicLanguage"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectAppLang">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLanguageEnglish"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_english"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_18sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLanEngSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language_selection"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="@id/ivLanguageEnglish"
+                        android:visibility="gone"
+                        android:layout_alignParentStart="true"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblLanguageEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/lblLanguageArabic"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:textColor="@color/black_1"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/rlEngLanguage"
+                    android:text="@string/lbl_english"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlArabicLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_45sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectAppLang"
+                    app:layout_constraintStart_toEndOf="@+id/rlEngLanguage">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLanguageArabic"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_arabic"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_18sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLanArabicSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language_selection"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="@id/ivLanguageArabic"
+                        android:visibility="gone"
+                        android:layout_alignParentStart="true"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblLanguageArabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    app:layout_constraintStart_toEndOf="@+id/lblLanguageEnglish"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_45sdp"
+                    android:textColor="@color/black_1"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/rlArabicLanguage"
+                    android:text="@string/lbl_arabic"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    android:text="@string/lbl_select_ad_lang"
+                    android:id="@+id/lblSelectAdLang"
+                    android:textColor="@color/gray_1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLanguageEnglish"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_25sdp"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlAdEngLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/rlAdArabicLanguage"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectAdLang"
+                    app:layout_constraintHorizontal_bias="0.5">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAdLanguageEnglish"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_english"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_18sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAdLanEngSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language_selection"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="@id/ivAdLanguageEnglish"
+                        android:visibility="gone"
+                        android:layout_alignParentStart="true"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAdLanguageEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/lblAdLanguageArabic"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:textColor="@color/black_1"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/rlAdEngLanguage"
+                    android:text="@string/lbl_english" app:layout_constraintHorizontal_bias="0.5"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlAdArabicLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/rlAdBothLanguage"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectAdLang"
+                    app:layout_constraintStart_toEndOf="@+id/rlAdEngLanguage"
+                    app:layout_constraintHorizontal_bias="0.5">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAdLanguageArabic"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_arabic"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_18sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAdLanArabicSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language_selection"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="@id/ivAdLanguageArabic"
+                        android:visibility="gone"
+                        android:layout_alignParentStart="true"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAdLanguageArabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    app:layout_constraintStart_toEndOf="@+id/lblAdLanguageEnglish"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_45sdp"
+                    android:textColor="@color/black_1"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/rlAdArabicLanguage"
+                    android:text="@string/lbl_arabic" app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/lblAdLanguageBoth"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlAdBothLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblSelectAdLang"
+                    app:layout_constraintStart_toEndOf="@+id/rlAdArabicLanguage"
+                    app:layout_constraintHorizontal_bias="0.5">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAdLanguageBoth"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_both_language"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_18sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAdLanBothSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language_selection"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="@id/ivAdLanguageBoth"
+                        android:visibility="gone"
+                        android:layout_alignParentStart="true"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAdLanguageBoth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/small_medium"
+                    app:layout_constraintStart_toEndOf="@+id/lblAdLanguageArabic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:textColor="@color/black_1"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/rlAdBothLanguage"
+                    android:text="@string/lbl_english_and_arabic"
+                    app:layout_constraintHorizontal_bias="0.5"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnContinue"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdLanguageArabic"
+                    style="@style/Rounded_Red_Button"
+                    android:text="@string/btn_continue"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_margin="@dimen/_15sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

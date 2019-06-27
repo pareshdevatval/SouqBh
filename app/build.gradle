@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.souqbh"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug{
+            buildConfigField("String", "BASE_URL", "\"http://souqbh.reviewprototypes.com/api/v1/\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$app_compact_version"
+    implementation "androidx.core:core-ktx:$app_compact_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /*Recyclerview*/
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    /*Livedata & ViewModel*/
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    /*Room Database*/
+    api "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    /*Fabric*/
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.0@aar') {
+        transitive = true;
+    }
+
+    /*SDP*/
+    implementation "com.intuit.sdp:sdp-android:$sdp_version"
+
+    /*GLIDE*/
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit_version") {
+        exclude module: 'gson'
+    }
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_version"
+    implementation 'androidx.paging:paging-runtime-ktx:2.1.0'
+
+    // Dagger 2
+    implementation "com.google.dagger:dagger:$dagger2_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger2_version"
+
+    // Navigation
+    implementation "android.arch.navigation:navigation-fragment:$navigation_version"
+    implementation "android.arch.navigation:navigation-ui:$navigation_version"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+    implementation 'org.reactivestreams:reactive-streams:1.0.2'
+
+    //FCM
+    implementation "com.google.firebase:firebase-messaging:$fcm_version"
+
+    /*Image cropper*/
+    implementation "com.theartofdev.edmodo:android-image-cropper:$image_cropper"
+
+    /*Bottom Navigation*/
+    implementation project(':spacelib')
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+

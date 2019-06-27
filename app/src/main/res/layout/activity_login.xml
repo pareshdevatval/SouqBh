@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true"
+                    android:fitsSystemWindows="true"
+                    android:animateLayoutChanges="true">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_1">
+
+                <ImageView
+                        android:id="@+id/ivLoginBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvGuestButton"
+                        android:scaleType="fitXY"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAppLogo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_marginTop="@dimen/_200sdp"
+                        android:src="@drawable/splash_logo"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/small_medium"
+                        android:text="@string/lbl_sign_in_with"
+                        android:id="@+id/tvSignInLabel"
+                        android:textColor="@color/gray_1"
+                        app:layout_constraintTop_toBottomOf="@+id/ivAppLogo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                <View android:id="@+id/dividerView"
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/_1sdp"
+                      app:layout_constraintLeft_toLeftOf="parent"
+                      app:layout_constraintRight_toRightOf="parent"
+                      android:layout_marginEnd="@dimen/_15sdp"
+                      android:layout_marginStart="@dimen/_15sdp"
+                      android:background="@color/gray_2"
+                      app:layout_constraintTop_toBottomOf="@+id/tvSignInLabel"
+                      android:layout_marginTop="@dimen/_7sdp"/>
+
+                <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/ivAppLogo"
+                        app:tabSelectedTextColor="@color/red_1"
+                        app:tabTextAppearance="@style/MyCustomTextAppearance"
+                        app:tabTextColor="@color/black_1"
+                        app:tabIndicatorColor="@color/red_1"
+                        app:tabGravity="fill"
+                        app:tabMode="fixed"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintInput"
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dividerView"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:background="@drawable/rounded_gray_solid_strock"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCountryCode"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            style="@style/small_reg"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:visibility="gone"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:gravity="center"
+                            android:animateLayoutChanges="true"
+                            android:drawablePadding="@dimen/small_padding"
+                            android:text="@string/lbl_default_country_code"
+                            android:textColor="@color/gray_3"
+                            android:layout_marginStart="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etPhoneEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Rounded_EditText"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@null"
+                            android:imeOptions="actionDone"
+                            android:hint="@string/hint_email_address"
+                            android:text="amarjadeja12@gmail.com"
+                            android:layout_marginStart="0dp"
+                            app:layout_constraintStart_toEndOf="@+id/tvCountryCode"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnGetOtp"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintInput"
+                        style="@style/Rounded_Red_Button"
+                        android:text="@string/btn_get_otp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/small_bold"
+                        android:textColor="@color/black_1"
+                        android:text="@string/lbl_sign_up_message"
+                        app:layout_constraintTop_toBottomOf="@+id/btnGetOtp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_margin="@dimen/_15sdp"/>
+
+                <View android:id="@+id/dividerView1"
+                      android:layout_width="match_parent"
+                      app:layout_constraintTop_toBottomOf="@+id/tvSignUp"
+                      android:layout_marginTop="@dimen/_15sdp"
+                      android:background="@color/gray_2"
+                      android:layout_height="@dimen/_1sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvGuestButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/small_medium"
+                        android:textColor="@color/red_1"
+                        android:text="@string/lbl_guest"
+                        android:gravity="center"
+                        android:padding="@dimen/large_padding"
+                        app:layout_constraintTop_toBottomOf="@+id/dividerView1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

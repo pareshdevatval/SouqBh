@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/selector_introduction_tab"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tabGravity="center"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                android:layout_margin="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Rounded_Red_Button"
+                android:text="@string/btn_next"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/_15sdp"
+                android:paddingStart="@dimen/extra_huge_padding"
+                android:paddingEnd="@dimen/extra_huge_padding"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSkipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/reg_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white_1"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/btn_skip"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

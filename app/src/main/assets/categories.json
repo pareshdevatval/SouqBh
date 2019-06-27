@@ -1,0 +1,40 @@
+{
+  "result": [
+    {
+      "c_id": 1,
+      "c_name": "Vehicles",
+      "c_image": "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg",
+      "sub_categories": [
+        {
+          "c_id": 2,
+          "c_name": "Cars",
+          "c_image": "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg"
+        },
+        {
+          "c_id": 3,
+          "c_name": "Motorcyles",
+          "c_image": "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg"
+        },
+        {
+          "c_id": 4,
+          "c_name": "Heavy Vehicles",
+          "c_image": "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg"
+        },
+        {
+          "c_id": 5,
+          "c_name": "Spare Parts",
+          "c_image": "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg"
+        }
+      ]
+    }
+  ],
+  "banners": [
+    "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg",
+    "https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/be/37/93/be379385-c465-70b6-ebfb-44d7eb48f0f9/AppIcon-1-1x_U007emarketing-85-220-6.png/246x0w.jpg"
+  ],
+  "per_page": 5,
+  "total_pages": 1,
+  "current_page": 1,
+  "message": "Categories found successfully.",
+  "status": true
+}

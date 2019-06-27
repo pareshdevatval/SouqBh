@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="countryCode" type="com.souqbh.data.db.entity.CountryCode"/>
+    </data>
+    <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/white_1">
+        <TextView
+                android:id="@+id/tvCountryCode"
+                style="@style/reg_reg"
+                android:singleLine="true"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="ABC"
+                android:text="@{countryCode.dial_code + ` ` + countryCode.name}"
+                android:textAlignment="center"
+                android:textColor="@color/gray_1"
+                android:textAllCaps="false"/>
+    </RelativeLayout>
+</layout>

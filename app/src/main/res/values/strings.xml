@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">SouqBH</string>
+    <string name="title_home">Home</string>
+    <string name="title_my_ads">My Ads</string>
+    <string name="title_watchlist">Watch list</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_account">Account</string>
+
+    <!--Common Validation Messages-->
+    <string name="blank_data">Please enter data</string>
+
+    <string name="blank_username">Please enter username</string>
+    <string name="blank_email">Please enter email address</string>
+    <string name="blank_first_name">Please enter first name</string>
+    <string name="blank_last_name">Please enter last name</string>
+    <string name="blank_phone">Please enter phone number</string>
+    <string name="blank_password">Please enter password</string>
+    <string name="blank_current_password">Please enter current password</string>
+    <string name="blank_new_password">Please enter new password</string>
+    <string name="blank_confirm_password">Please enter confirm password</string>
+    <string name="blank_otp">Please enter OTP</string>
+
+    <string name="blank_title">Please enter title</string>
+    <string name="blank_desc">Please enter description</string>
+    <string name="blank_address">Please select valid address</string>
+    <string name="blank_assign_to">Please select assign to</string>
+
+    <string name="invalid">Invalid data</string>
+    <string name="msg_all_field_required">All fields are required.</string>
+    <string name="invalid_email">Please enter valid email</string>
+    <string name="invalid_confirm_password">Password and confirm password does not match</string>
+    <string name="invalid_password">Password length should be minimum 8 characters.</string>
+    <!--<string name="invalid_password">Please enter valid password, password should be at least 6 characters long with 1 character and 1 number.</string>-->
+    <string name="invalid_phone">Please enter valid phone number</string>
+    <string name="select_country_code">Please select country code</string>
+    <string name="select_profile_image">Please select profile image</string>
+
+    <!--Hint Strings-->
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_country_code">Country Code</string>
+    <string name="hint_first_name">First Name*</string>
+    <string name="hint_last_name">Last Name*</string>
+    <string name="hint_email">Email*</string>
+    <string name="hint_phone">Phone Number*</string>
+
+    <!--Action String-->
+    <string name="action_retry">Retry</string>
+
+    <!--Message String-->
+    <string name="msg_no_internet">No internet connection available.</string>
+
+    <!--Button String-->
+    <string name="btn_get_otp">Get OTP</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_verify">Verify</string>
+    <string name="btn_agree_sign_up"><![CDATA[Agree & Sign Up]]></string>
+
+    <!--Label String-->
+    <string name="lbl_guest">Continue as a guest</string>
+    <string name="lbl_sign_in_with">Sign in with</string>
+    <string name="lbl_sign_up_with">Sign up with</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_sign_up_message">Don\'t have account? SIGN UP</string>
+    <string name="lbl_receive_otp">Didn\'t receive OTP? RESEND</string>
+    <string name="lbl_resend">RESEND</string>
+    <string name="lbl_sign_up">SIGN UP</string>
+    <string name="lbl_default_country_code" translatable="false">+000</string>
+    <string name="lbl_choose_language">Choose your preferred language</string>
+    <string name="lbl_english" translatable="false">English</string>
+    <string name="lbl_arabic" translatable="false">عربى</string>
+    <string name="lbl_phone_verification">Phone Verification</string>
+    <string name="lbl_email_verification">Email Verification</string>
+    <string name="lbl_enter_digit_code">Enter 4 Digit Code</string>
+    <string name="lbl_check_sms">Check your SMS. We have sent you OTP code at</string>
+    <string name="lbl_check_email">Check your Email. We have sent you OTP code at</string>
+    <string name="lbl_create_account">Create Account</string>
+    <string name="lbl_register_msg">Please register to your account to continue with SouqBH</string>
+    <string name="lbl_terms_condition_msg">
+        By continuing you agree to souqbh\'s \n Terms &amp; Conditions and Privacy Policy
+    </string>
+    <string name="lbl_terms_and_condition">Terms &amp; Conditions</string>
+    <string name="lbl_privacy_policy">Privacy Policy</string>
+    <string name="lbl_select_app_lang">Select app language</string>
+    <string name="lbl_english_and_arabic" translatable="false">English and Arabic</string>
+    <string name="lbl_select_ad_lang">Select language of advertise</string>
+</resources>

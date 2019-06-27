@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">الصفحة الرئيسية</string>
+    <string name="title_my_ads">إعلاناتي</string>
+    <string name="title_watchlist">قائمة المراقبة</string>
+    <string name="title_messages">رسائل</string>
+    <string name="title_account">الحساب</string>
+
+    <!--Common Validation Messages-->
+    <string name="blank_data">الرجاء إدخال البيانات</string>
+
+    <string name="blank_username">الرجاء إدخال اسم المستخدم</string>
+    <string name="blank_email">الرجاء إدخال عنوان البريد الإلكتروني</string>
+    <string name="blank_first_name">الرجاء إدخال الاسم الأول</string>
+    <string name="blank_last_name">الرجاء إدخال الاسم الأخير</string>
+    <string name="blank_phone">الرجاء إدخال رقم الهاتف</string>
+    <string name="blank_password">الرجاء إدخال كلمة المرور</string>
+    <string name="blank_current_password">الرجاء إدخال كلمة المرور الحالية</string>
+    <string name="blank_new_password">الرجاء إدخال كلمة مرور جديدة</string>
+    <string name="blank_confirm_password">الرجاء إدخال تأكيد كلمة المرور</string>
+
+    <string name="blank_title">الرجاء إدخال العنوان</string>
+    <string name="blank_desc">الرجاء إدخال الوصف</string>
+    <string name="blank_address">يرجى اختيار عنوان صالح</string>
+    <string name="blank_assign_to">يرجى اختيار تعيين ل</string>
+
+    <string name="invalid">بيانات غير صالحة</string>
+    <string name="msg_all_field_required">جميع الحقول مطلوبة</string>
+    <string name="invalid_email">الرجاء إدخال بريد إلكتروني صحيح</string>
+    <string name="invalid_confirm_password">كلمة المرور وتأكيد كلمة المرور غير متطابقة</string>
+    <string name="invalid_password">يجب ألا يقل طول كلمة المرور عن 8 أحرف.</string>
+    <string name="invalid_phone">الرجاء إدخال رقم هاتف صحيح</string>
+    <string name="select_country_code">يرجى اختيار رمز البلد</string>
+    <string name="select_profile_image">يرجى اختيار صورة الملف الشخصي</string>
+    <!--<string name="invalid_password">Please enter valid password, password should be at least 6 characters long with 1 character and 1 number.</string>-->
+
+    <!--Hint Strings-->
+    <string name="hint_email_address">عنوان بريد الكتروني</string>
+    <string name="hint_phone_number">رقم الهاتف</string>
+    <string name="hint_country_code">الرقم الدولي</string>
+    <string name="hint_email">البريد الإلكتروني*</string>
+    <string name="hint_first_name">الاسم الاول*</string>
+    <string name="hint_last_name">الكنية*</string>
+    <string name="hint_phone">رقم الهاتف*</string>
+
+    <!--Action String-->
+    <string name="action_retry">إعادة المحاولة</string>
+
+    <!--Message String-->
+    <string name="msg_no_internet">لا يوجد اتصال إنترنت متاح.</string>
+
+    <!--Button String-->
+    <string name="btn_get_otp">الحصول على OTP</string>
+    <string name="btn_continue">استمر</string>
+    <string name="btn_next">التالى</string>
+    <string name="btn_skip">تخطى</string>
+    <string name="btn_verify">التحقق</string>
+    <string name="btn_agree_sign_up">موافقة وتسجيل</string>
+    <string name="blank_otp">يرجى إدخال OTP</string>
+
+    <!--Label String-->
+    <string name="lbl_guest">تواصل كضيف</string>
+    <string name="lbl_sign_in_with">تسجيل الدخول ب</string>
+    <string name="lbl_sign_up_with">سجل مع</string>
+    <string name="lbl_email">البريد الإلكتروني</string>
+    <string name="lbl_phone">هاتف</string>
+    <string name="lbl_sign_up_message">ليس لديك حساب؟ سجل</string>
+    <string name="lbl_receive_otp">لم تتلقى مكتب المدعي العام؟ إعادة إرسال</string>
+    <string name="lbl_resend">إعادة إرسال</string>
+    <string name="lbl_sign_up">سجل</string>
+    <string name="lbl_choose_language">اختر لغتك المفضلة</string>
+    <string name="lbl_phone_verification">التحقق من الهاتف</string>
+    <string name="lbl_email_verification">تأكيد بواسطة البريد الالكتروني</string>
+    <string name="lbl_enter_digit_code">أدخل الرمز المكون من 4 أرقام</string>
+    <string name="lbl_check_email">تحقق من بريدك الالكتروني. لقد أرسلنا لك رمز OTP على</string>
+    <string name="lbl_check_sms">التحقق من الرسائل القصيرة الخاصة بك. لقد أرسلنا لك رمز OTP على</string>
+    <string name="lbl_create_account">إنشاء حساب</string>
+    <string name="lbl_register_msg">يرجى التسجيل في حسابك للمتابعة مع SouqBH</string>
+    <string name="lbl_terms_condition_msg">بموافقتك ، فأنت توافق على الشروط والأحكام وسياسة الخصوصية الخاصة بسوق
+    </string>
+    <string name="lbl_terms_and_condition">البنود و الظروف</string>
+    <string name="lbl_privacy_policy">سياسة خاصة</string>
+    <string name="lbl_select_app_lang">اختر لغة التطبيق</string>
+    <string name="lbl_select_ad_lang">اختر لغة الإعلان</string>
+
+</resources>

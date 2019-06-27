@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="loginType" type="String"/>
+        <variable name="userData" type="com.souqbh.data.api.UserData"/>
+        <import type="com.souqbh.utils.constants.AppConstants"/>
+        <import type="android.text.TextUtils"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_1">
+
+        <include layout="@layout/app_toolbar"
+                 android:id="@+id/toolbarLayout"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toRightOf="parent"/>
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbarLayout"
+                    android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_1">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVerificationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/large_bold"
+                        android:textColor="@color/black_1"
+                        android:text="@{loginType.equalsIgnoreCase(AppConstants.LOGIN_EMAIL)?@string/lbl_email_verification:@string/lbl_phone_verification}"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVerificationMsg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/small_reg"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/gray_3"
+                        tools:text="Check you SMS messages. We have sent you OTP code at +00 123 123 1234"
+                        app:layout_constraintTop_toBottomOf="@+id/tvVerificationTitle"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEnterDigitCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/small_reg"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:textColor="@color/gray_3"
+                        android:text="@string/lbl_enter_digit_code"
+                        app:layout_constraintTop_toBottomOf="@+id/tvVerificationMsg"/>
+
+
+                <com.souqbh.customview.CustomPinview
+                        android:id="@+id/cpPinView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvEnterDigitCode"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:cursorVisible="false"
+                        app:hint="."
+                        app:textSize="@dimen/_10sdp"
+                        app:inputType="number"
+                        app:password="true"
+                        app:pinHeight="@dimen/_40sdp"
+                        app:pinLength="4"
+                        app:pinWidth="@dimen/_50sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvResendOtp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/small_bold"
+                        android:textColor="@color/black_1"
+                        android:text="@string/lbl_receive_otp"
+                        app:layout_constraintTop_toBottomOf="@+id/cpPinView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_25sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnVerifyOtp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvResendOtp"
+                        style="@style/Rounded_Red_Button"
+                        android:text="@string/btn_verify"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

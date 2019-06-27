@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="category"
+                  type="com.souqbh.data.api.Category"/>
+
+        <import type="com.souqbh.utils.AppUtils"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvCategoryImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/gray_4"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cvSubCategoryImage1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCategoryImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:imageUrl="@{category.c_image}"
+                    android:src="@mipmap/ic_launcher"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvSubCategoryImage1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_71sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/gray_4"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintStart_toEndOf="@+id/cvCategoryImage">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSubCategoryImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:imageUrl="@{category.c_image}"
+                    android:src="@mipmap/ic_launcher"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvSubCategoryImage2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_71sdp"
+                app:cardBackgroundColor="@color/gray_4"
+                app:layout_constraintTop_toBottomOf="@+id/cvSubCategoryImage1"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintStart_toEndOf="@+id/cvCategoryImage">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSubCategoryImage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:imageUrl="@{category.c_image}"
+                    android:src="@mipmap/ic_launcher"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvSubCategoryImage3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_71sdp"
+                app:cardBackgroundColor="@color/gray_4"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/cvCategoryImage"
+                app:layout_constraintEnd_toStartOf="@+id/cvSubCategoryImage4">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSubCategoryImage3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:imageUrl="@{category.c_image}"
+                    android:src="@mipmap/ic_launcher"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvSubCategoryImage4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_71sdp"
+                app:layout_constraintTop_toBottomOf="@+id/cvSubCategoryImage2"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/gray_4"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cvSubCategoryImage3"
+                app:layout_constraintHorizontal_bias="0.5">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSubCategoryImage4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:imageUrl="@{category.c_image}"
+                    android:src="@mipmap/ic_launcher"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
